@@ -1,10 +1,12 @@
 #!/bin/bash
 
+set -euo pipefail
+
+if ! command -v chezmoi >/dev/null; then
+    sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:kacper38/dotfiles.git
+fi
+
 git remote set-url origin git@github.com:kacper38/dotfiles.git
+exit 0
 
 
-echo "Hello World" > /tmp/hello
-
-
-echo "set -o vi" >> ~/.bashrc
-echo "test"
