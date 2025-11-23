@@ -1,5 +1,10 @@
 #!/bin/bash
+
+git remote set-url origin git@github.com:kacper38/dotfiles.git
+
+
 echo "Hello World" > /tmp/hello
+
 
 echo "set -o vi" >> ~/.bashrc
 echo "test"
